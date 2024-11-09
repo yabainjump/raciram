@@ -154,7 +154,7 @@ a:focus {
     top: 0;
     left: 0;
     z-index: 3;
-    border-bottom: 1px solid rgba(255, 255, 255, .3);
+
 }
 
 .top-bar .top-bar-left {
@@ -177,12 +177,9 @@ a:focus {
     height: 45px;
     padding: 0 10px;
     text-align: center;
-    border-left: 1px solid rgba(255, 255, 255, .3);
+    
 }
 
-.top-bar .text:last-child {
-    border-right: 1px solid rgba(255, 255, 255, .3);
-}
 
 .top-bar .text i {
     font-size: 16px;
@@ -212,12 +209,10 @@ a:focus {
     height: 100%;
     font-size: 16px;
     color: #FDBE33;
-    border-right: 1px solid rgba(255, 255, 255, .3);
+    
 }
 
-.top-bar .social a:first-child {
-    border-left: 1px solid rgba(255, 255, 255, .3);
-}
+
 
 .top-bar .social a:hover {
     color: #ffffff;
@@ -291,7 +286,7 @@ a:focus {
         top: 45px;
         padding: 20px 60px;
         background: transparent !important;
-        border-bottom: 1px solid rgba(255, 255, 255, .3);
+        
         z-index: 9;
     }
     
