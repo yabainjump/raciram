@@ -1,4 +1,18 @@
 /**********************************/
+/****** Global Styles *************/
+/**********************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Police par défaut */
+    line-height: 1.6; /* Espacement des lignes */
+}
+
+/**********************************/
 /****** Media Queries *************/
 /**********************************/
 @media (max-width: 1200px) {
@@ -9,20 +23,23 @@
 
 @media (max-width: 992px) {
     h1 {
-        font-size: 24px;
+        font-size: 24px; /* Taille du titre */
     }
     .btn.btn-custom {
-        width: 100%; 
+        width: 100%; /* Boutons prennent toute la largeur */
+    }
+    input, textarea, select, button {
+        width: 100%; /* Champs de formulaire prennent toute la largeur */
     }
 }
 
 @media (max-width: 768px) {
     body {
-        font-size: 14px; 
+        font-size: 14px; /* Taille de police pour petits écrans */
     }
     .back-to-top {
         width: 40px; 
-        height: 40px;
+        height: 40px; /* Taille du bouton "Retour en haut" */
     }
 }
 /*******************************/
