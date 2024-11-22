@@ -8,7 +8,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif; /* Police par défaut */
+    font-family: 'Quicksand', Arial, sans-serif; /* Police par défaut */
     line-height: 1.6; /* Espacement des lignes */
 }
 
@@ -126,7 +126,8 @@ a:focus {
     visibility: hidden;
     -webkit-transition: opacity .3s ease-out, visibility 0s linear .3s;
     -o-transition: opacity .3s ease-out, visibility 0s linear .3s;
-    transition: opacity .3s ease-out, visibility 0s linear .3s;
+    transition: opacity .3s ease-out, visibility 0s linear .3s; /* Remove vendor prefixes */
+
     z-index: 999;
 }
 
@@ -170,7 +171,7 @@ a:focus {
     font-size: 22px;
     right: 15px;
     bottom: 15px;
-    transition: background 0.5s;
+    transition: opacity .3s ease-out, visibility 0s linear .3s; /* Remove vendor prefixes */
     z-index: 9;
 }
 
