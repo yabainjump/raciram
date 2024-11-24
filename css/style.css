@@ -15,7 +15,51 @@ body {
 /**********************************/
 /****** Media Queries *************/
 /**********************************/
-@media (max-width: 1200px) {
+@media (max-width: 1200px) {:root {
+    --main-color: #58a6e6;
+    --secondary-color: #4a4c70;
+    --background-color: #ffffff;
+}
+:root {
+    --main-color: #58a6e6;
+    --secondary-color: #4a4c70;
+    --text-color: #777777;
+    --background-color: #ffffff;
+}
+
+body {
+    font-family: 'Quicksand', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--background-color);
+}
+
+/* Boutons */
+.btn.btn-custom {
+    padding: 12px 20px;
+    border: 2px solid var(--main-color);
+    transition: ease-out 0.3s;
+}
+
+.btn.btn-custom:hover {
+    color: #20212B;
+    box-shadow: inset 0 0 0 30px var(--main-color);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* Sections CSS */
+.page-header {
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/page-header.jpg);
+}
+
+/* Et d'autres corrections similaires */
+
     .container-fluid {
         max-width: 100%;
     }
