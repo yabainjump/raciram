@@ -2,7 +2,8 @@
     <html lang="en">
 
     <head>
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Réseau d’Afrique Centrale pour le Contrôle Intégré de la Résistance Antimicrobienne (RACCIRAM)</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="Free Website Template" name="keywords">
@@ -107,188 +108,206 @@
                 </div>
             </div>
             <!-- Page Header End -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .service {
-            padding: 40px 0;
-        }
-        .section-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 20px;
-        }
-        .col-lg-4, .col-md-6 {
-            flex: 1 1 30%; /* Flexbox pour la mise en page */
-            margin: 10px;
-        }
-        .service-item {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 20px;
-            text-align: center;
-            transition: box-shadow 0.3s;
-        }
-        .service-item:hover {
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        .service-icon {
-            cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
-        }
-        .service-img {
-            width: 200px; /* Largeur fixe */
-            height: 300px; /* Hauteur fixe */
-            object-fit: cover; /* Ajuster l'image sans déformation */
-            border-radius: 5px; /* Coins arrondis pour les images */
-        }
-        .popup {
-            display: none; /* Caché par défaut */
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
-            justify-content: center;
-            align-items: center;
-            z-index: 999;
-        }
-        .popup-content {
-            background: #333;
-            padding: 20px;
-            border-radius: 5px;
-            max-width: 80%; /* Ajuster la largeur maximale du pop-up */
-            text-align: center;
-        }
-        .popup img {
-            width: 100%; /* L'image prendra toute la largeur du pop-up */
-            max-height: 400px; /* Limiter la hauteur maximale de l'image */
-            object-fit: cover; /* Couvrir l'espace sans déformer l'image */
-            border-radius: 5px; /* Coins arrondis pour l'image */
-        }
-        .close-btn {
-            background: red;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-    </style>
-</head>
-<body>
-
-<!-- Service Start -->
-<div class="service">
-    <div class="container">
-        <div class="section-header text-center">
-            <p>Qu'est-ce que nous faisons ?</p>
-            <h2>Nous croyons que nous pouvons sauver plus de vies.</h2>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="service-item">
-                    <div class="service-icon" onclick="openPopup('Alimentation Saine', 'Promouvoir une alimentation équilibrée pour améliorer la santé publique.');">
-                        <img src="img/resistance aux entimicrobien flayer.jpg" alt="Alimentation Saine" class="service-img">
+            <!DOCTYPE html>
+            <html lang="fr">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Services</title>
+                <style>
+                    body {
+                        font-family: 'Arial', sans-serif;
+                        margin: 0;
+                        padding: 0;
+                        background-color: #f9f9f9;
+                    }
+                    .service {
+                        padding: 40px 20px;
+                    }
+                    .section-header {
+                        text-align: center;
+                        margin-bottom: 40px;
+                        color: #333;
+                    }
+                    .grid-container {
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+                        gap: 20px; /* Espacement entre les éléments */
+                    }
+                    .service-item {
+                        border: 1px solid #ddd;
+                        border-radius: 10px;
+                        padding: 20px;
+                        text-align: center;
+                        background-color: white;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                        transition: transform 0.3s, box-shadow 0.3s;
+                    }
+                    .service-item:hover {
+                        transform: translateY(-5px);
+                        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                    }
+                    .service-icon {
+                        cursor: pointer; /* Change le curseur pour indiquer que c'est cliquable */
+                        margin-bottom: 10px;
+                    }
+                    .service-img {
+                        width: 100%; /* Largeur dynamique */
+                        height: 200px; /* Augmenter la hauteur des images */
+                        object-fit: cover; /* Ajuster l'image sans déformation */
+                        border-radius: 10px; /* Coins arrondis pour les images */
+                        transition: transform 0.3s;
+                    }
+                    .service-img:hover {
+                        transform: scale(1.05); /* Légère augmentation de taille au survol */
+                    }
+                    .service-text h3 {
+                        font-size: 1.5em; /* Taille du texte */
+                        margin: 10px 0;
+                        color: #2c3e50; /* Couleur du texte */
+                    }
+                    .service-text p {
+                        font-size: 1em; /* Taille du texte */
+                        color: #34495e; /* Couleur du texte */
+                        margin: 0;
+                    }
+                    .popup {
+                        display: none; /* Caché par défaut */
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0, 0, 0, 0.9); /* Couleur de fond plus sombre */
+                        color: white;
+                        justify-content: center;
+                        align-items: center;
+                        z-index: 999;
+                        backdrop-filter: blur(5px); /* Flou de fond */
+                    }
+                    .popup-content {
+                        background: #333;
+                        padding: 20px;
+                        border-radius: 10px;
+                        max-width: 90%; /* Ajuster la largeur maximale du pop-up */
+                        text-align: center;
+                        overflow-y: auto; /* Permet le défilement si contenu trop grand */
+                        max-height: 90%; /* Limiter la hauteur du pop-up */
+                    }
+                    .popup img {
+                        width: 100%; /* L'image prendra toute la largeur du pop-up */
+                        height: auto; /* Hauteur dynamique */
+                        max-height: 70vh; /* Limiter la hauteur de l'image à 70% de la vue */
+                        object-fit: cover; /* Couvrir l'espace sans déformer l'image */
+                        border-radius: 5px; /* Coins arrondis pour l'image */
+                    }
+                    .close-btn {
+                        background: red;
+                        color: white;
+                        border: none;
+                        padding: 10px 15px;
+                        cursor: pointer;
+                        margin-top: 20px;
+                    }
+                    @media (max-width: 768px) {
+                        .grid-container {
+                            grid-template-columns: 1fr; /* Une colonne sur les petits écrans */
+                        }
+                    }
+                </style>
+            </head>
+            <body>
+            
+            <!-- Service Start -->
+            <div class="service">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <p>Qu'est-ce que nous faisons ?</p>
+                        <h2>Nous croyons que nous pouvons sauver plus de vies.</h2>
                     </div>
-                    <div class="service-text">
-                        <h3>Alimentation Saine</h3>
-                        <p>Promouvoir une alimentation équilibrée pour améliorer la santé publique.</p>
+            
+                    <div class="grid-container">
+                        <div class="service-item">
+                            <div class="service-icon" onclick="openPopup('Alimentation Saine', 'Promouvoir une alimentation équilibrée pour améliorer la santé publique.');">
+                                <img src="img/resistance aux entimicrobien flayer.jpg" alt="Alimentation Saine" class="service-img">
+                            </div>
+                            <div class="service-text">
+                                <h3>Alimentation Saine</h3>
+                                <p>Promouvoir une alimentation équilibrée pour améliorer la santé publique.</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon" onclick="openPopup('Eau Pure', 'Assurer l\'accès à une eau potable et propre pour tous.');">
+                                <img src="img/resistance aux entimicrobien flayer.jpg" alt="Eau Pure" class="service-img">
+                            </div>
+                            <div class="service-text">
+                                <h3>Eau Pure</h3>
+                                <p>Assurer l'accès à une eau potable et propre pour tous.</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon" onclick="openPopup('Soins', 'Fournir des soins accessibles et de qualité.');">
+                                <img src="img/resistance aux entimicrobien flayer.jpg" alt="Soins" class="service-img">
+                            </div>
+                            <div class="service-text">
+                                <h3>Soins</h3>
+                                <p>Fournir des soins accessibles et de qualité.</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon" onclick="openPopup('École', 'Offrir une éducation de base pour un avenir meilleur.');">
+                                <img src="img/activiter RACCIRAM .jpg" alt="École" class="service-img">
+                            </div>
+                            <div class="service-text">
+                                <h3>École</h3>
+                                <p>Offrir une éducation de base pour un avenir meilleur.</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon" onclick="openPopup('Installations Résidentielles', 'Fournir des logements adéquats et sûrs.');">
+                                <img src="img/resistance aux entimicrobien flayer.jpg" alt="Installations Résidentielles" class="service-img">
+                            </div>
+                            <div class="service-text">
+                                <h3>Installations Résidentielles</h3>
+                                <p>Fournir des logements adéquats et sûrs.</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon" onclick="openPopup('Assistance Sociale', 'Apporter un soutien aux personnes vulnérables.');">
+                                <img src="img/flayer one health .jpg" alt="Assistance Sociale" class="service-img">
+                            </div>
+                            <div class="service-text">
+                                <h3>Assistance Sociale</h3>
+                                <p>Apporter un soutien aux personnes vulnérables.</p>
+                            </div>
+                        </div>
                     </div>
+            
+                    <div class="popup" id="popup">
+                        <div class="popup-content">
+                            <h2 id="popup-title"></h2>
+                            <img id="popup-image" src="" alt="" style="display: none;"> <!-- Image pour le pop-up -->
+                            <p id="popup-description"></p>
+                            <button class="close-btn" onclick="closePopup()">Fermer</button>
+                        </div>
+                    </div>
+            
+                    <script>
+                        function openPopup(title, description) {
+                            document.getElementById('popup-title').innerText = title;
+                            document.getElementById('popup-description').innerText = description;
+                            document.getElementById('popup-image').src = event.target.src; // Récupère l'image cliquée
+                            document.getElementById('popup-image').style.display = 'block'; // Affiche l'image dans le pop-up
+                            document.getElementById('popup').style.display = 'flex'; // Affiche le pop-up
+                        }
+            
+                        function closePopup() {
+                            document.getElementById('popup').style.display = 'none'; // Cache le pop-up
+                        }
+                    </script>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-item">
-                    <div class="service-icon" onclick="openPopup('Eau Pure', 'Assurer l\'accès à une eau potable et propre pour tous.');">
-                        <img src="img/resistance aux entimicrobien flayer.jpg" alt="Eau Pure" class="service-img">
-                    </div>
-                    <div class="service-text">
-                        <h3>Eau Pure</h3>
-                        <p>Assurer l'accès à une eau potable et propre pour tous.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-item">
-                    <div class="service-icon" onclick="openPopup('Soins', 'Fournir des soins accessibles et de qualité.');">
-                        <img src="img/resistance aux entimicrobien flayer.jpg" alt="Soins" class="service-img">
-                    </div>
-                    <div class="service-text">
-                        <h3>Soins</h3>
-                        <p>Fournir des soins accessibles et de qualité.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-item">
-                    <div class="service-icon" onclick="openPopup('École', 'Offrir une éducation de base pour un avenir meilleur.');">
-                        <img src="img/activiter RACCIRAM .jpg" alt="École" class="service-img">
-                    </div>
-                    <div class="service-text">
-                        <h3>École</h3>
-                        <p>Offrir une éducation de base pour un avenir meilleur.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-item">
-                    <div class="service-icon" onclick="openPopup('Installations Résidentielles', 'Fournir des logements adéquats et sûrs.');">
-                        <img src="img/resistance aux entimicrobien flayer.jpg" alt="Installations Résidentielles" class="service-img">
-                    </div>
-                    <div class="service-text">
-                        <h3>Installations Résidentielles</h3>
-                        <p>Fournir des logements adéquats et sûrs.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="service-item">
-                    <div class="service-icon" onclick="openPopup('Assistance Sociale', 'Apporter un soutien aux personnes vulnérables.');">
-                        <img src="img/flayer one health .jpg" alt="Assistance Sociale" class="service-img">
-                    </div>
-                    <div class="service-text">
-                        <h3>Assistance Sociale</h3>
-                        <p>Apporter un soutien aux personnes vulnérables.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="popup" id="popup">
-            <div class="popup-content">
-                <h2 id="popup-title"></h2>
-                <img id="popup-image" src="" alt="" style="display: none;"> <!-- Image pour le pop-up -->
-                <p id="popup-description"></p>
-                <button class="close-btn" onclick="closePopup()">Fermer</button>
-            </div>
-        </div>
-
-        <script>
-            function openPopup(title, description) {
-                document.getElementById('popup-title').innerText = title;
-                document.getElementById('popup-description').innerText = description;
-                document.getElementById('popup-image').src = event.target.src; // Récupère l'image cliquée
-                document.getElementById('popup-image').style.display = 'block'; // Affiche l'image dans le pop-up
-                document.getElementById('popup').style.display = 'flex'; // Affiche le pop-up
-            }
-
-            function closePopup() {
-                document.getElementById('popup').style.display = 'none'; // Cache le pop-up
-            }
-        </script>
-    </div>
-</div>
-<!-- Service End -->
-
+            <!-- Service End -->
     <!-- Causes Start -->
     <div class="causes">
         <div class="container">
